@@ -1,0 +1,15 @@
+section
+paikkatiedon-mobiilikeruu-qfieldillä
+tervetuloa-qfield-peruskurssille
+qfieldin-taustaa
+miksi-qfield
+lukuohje
+mistä-lisätietoja
+virheet
+lisenssi-ja-oikeudet
+harjoitus-1-asennus-ja-käyttöönotto
+valmistautuminen
+sovelluksen-asentaminen-google-play--kaupasta
+sovelluksen-avaaminen-ja-käyttöliittymä
+qfieldin-käyttöliittymä
+selailutila
