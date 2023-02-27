@@ -1,9 +1,9 @@
 ---
-title: "Introduction to QGIS"
-author: "Gispo Ltd."
+title: "Paikkatiedon mobiilikeruu Qfieldissä"
+author: "Gispo Oy"
 date: "`r Sys.Date()`"
 site: "bookdown::bookdown_site"
-abstract: "A course covering advanced GeoServer topics."
+abstract: "Peruskurssi Qfield-lisäosan ja mobiilisovelluksen käytöstä."
 output:
     bookdown::html_book:
         toc: true
@@ -16,11 +16,41 @@ documentclass: book
 
 <!-- Harjoitukset -->
 
-# Template
+# 
 
-## Tervetuloa kurssille!
+# **Paikkatiedon mobiilikeruu QFieldillä**
 
-Kurssilla tehdään ja opitaan niitä ja näitä.
+\
+
+## **Tervetuloa QField-peruskurssille!**
+
+Tämän kurssin tarkoituksena on opastaa sinut QField--ohjelmiston käyttöön. QField hyödyntää QGIS-ohjelmistoa, ja oletuksena on, että ainakin perusteet QGISista on jo opittu. Muiden paikkatieto-ohjelmistojen käyttökokemus ei ole välttämätöntä koulutukseen osallistumiselle. Toki niistä on paljon hyötyä. Kysy rohkeasti opettajalta lisätietoja, jos käytetty terminologia tai joku muu asia jää epäselväksi.
+
+\
+
+## **QFieldin taustaa**
+
+QField mobiililaitteille tarkoitettu avoimen lähdekoodin paikkatieto-ohjelmisto. QFieldin pääkehittäjänä toimii sveitsiläinen yritys nimeltä OpenGIS.ch ja sovelluksen kehittämisen voidaan katsoa alkaneen jo vuonna 2011. QFieldin toiminnallisuudet ovat kehittyneet viime vuosina huimasti, ja se onkin käytössä paikkatiedon keruun mobiiliratkaisuna maailmalla melko laajasti. QFieldin käyttäjämäärää on melko vaikea arvioida, sillä ohjelmistoa ei tarvitse rekisteröidä, sitä voi käyttää useilla laitteilla samanaikaisesti ja jakaa edelleen vapaasti. Arvio kuukausittain QFieldiä käyttävistä on noin satatuhatta käyttäjää, sovelluksen kunkin version latausten määrä liikkuu puolestaan muutamassa sadassa tuhannessa kappaleessa
+
+QField--ohjelmisto on suunniteltu hyvin yhteensopivaksi QGIS-työpöytäohjelmiston kanssa, ja sikäli täydentää senkin käyttäjäkuntaa ja käyttötapauksia. Tämän lyhyen kurssin aikana käsittelemme vain osaa QFieldin kaikista toiminnallisuuksista. Kurssin perusteella sinun tulisi kuitenkin oppia QFieldin käytön perusteet, ja pystyä käyttämämään oppimaasi omaan käyttötarkoitukseesi.
+
+\
+
+## **Miksi QField?**
+
+Perimmäinen syy QFieldin käyttöön on tietysti paikkatietoaineistojen hyödyntäminen. Paikkatietoja voi hyödyntää monilla avoimen ja suljetun lähdekoodin ohjelmistolla, mutta tässä muutamia perusteluja juuri QField-ohjelmiston käytölle:
+
+-   **QField on ilmainen**. Voit ladata ja asentaa QFieldinilman lisenssi- tai käyttömaksuja. Käyttöön ei sisälly mitään maksuja.
+
+-   **QField on vapaa**. Jos tarvitset QFieldiin lisää ominaisuuksia, sinulla on täysi vapaus laajentaa ja muuttaa QFieldiä. Sinun ei tarvitse odottaa seuraavaa versioita ja toivoa, että tarvitsemasi ominaisuudet ovat sisällytetty mukaan. Jos osaat ohjelmoida, voit lisätä ominaisuudet itse. Voit myös rahoittaa uusien ominaisuuksien kehittämistä osaksi QFieldiä.
+
+-   **QField kehittyy jatkuvasti**. Kuka tahansa voi lisätä tai rahoittaa uusia ominaisuuksia QFieldiin ja siksi ohjelmisto kehittyy kiihtyvällä vauhdilla. Erilaisten lisäosien avulla on helppo toteuttaa omia prosesseja tukevia toimintoja.
+
+-   **QField on hyvin dokumentoitu**. QField sisältää laajan dokumentaation. Koko ajan kasvava käyttäjäyhteisö auttaa mielellään uusia käyttäjiä ja voit myös kysyä apua suoraan sovelluskehittäjiltä.
+
+-   **QGIS on järjestelmäriippumaton**. QFieldiä kehitetään Android-käyttöjärjestelmän ohella Windows-, ja iOS-mobiililaitteille.
+
+-   **QField on suomenkielinen**. QField-käyttöliittymä on suomennettu. Myös ruotsinkielinen versio on käytettävissä ilman lisäkustannuksia. Käyttöohjeita, web-sivustoja ja muita materiaaleja kehitetään ja suomennetaan jatkuvasti.
 
 ## Lukuohje
 
@@ -48,40 +78,30 @@ sudo lsb_release -a
 SELECT version();
 :::
 
-**Kysymykset, lisätiedot ja vihjeet** on esitetty seuraavasti:
+*
+QField GITHUBiin
 
-::: hint-box
-Mistä löydät tietoa GeoServeristä?
+\
 
-GeoServerillä on omat kotisivut.
-
-Psst! Tietoa GeoServeristä löydät internetistä.
-:::
-
-## Mistä lisätietoja?
+## **Mistä lisätietoja?**
 
 Ohessa muutamia web-sivustoja, joista saat lisätietoja:
 
 ::: note-box
-<http://www.qgis.org/>
+<https://qfield.org>\
+<https://qfield.org/docs/index.html>\
+<http://gis.stackexchange.com/>\
+<http://www.osgeo.fi>\
 :::
 
-::: note-box
-<http://docs.qgis.org/>
-:::
+\
 
-::: note-box
-<http://gis.stackexchange.com/>
-:::
+## **Virheet**
 
-::: note-box
-<http://www.osgeo.fi>
-:::
+Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä kouluttajalle tai sähköpostilla info\@gispo.fi-osoitteeseen.
 
-## Virheet
-
-Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä kouluttajalle tai sähköpostilla [info\@gispo.fi-osoitteeseen](mailto:info@gispo.fi-osoitteeseen){.email}.
+\
 
 ## Lisenssi ja oikeudet
 
-Nämä materiaalit on "_____"-kurssille kehittänyt Gispo Oy. Materiaalit on lisensoitu seuraavalla lisenssillä: [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)
+Nämä materiaalit on "Paikkatiedon mobiilikeruu QFieldillä"-kurssille kehittänyt Gispo Oy. Materiaalit on lisensoitu seuraavalla lisenssillä: [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)
