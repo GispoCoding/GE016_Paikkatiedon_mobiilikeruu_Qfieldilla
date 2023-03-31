@@ -46,13 +46,13 @@ Lisätään nyt taustakartta koko Suomen alueelta käyttäen QGISin **QuickMapSe
 
 ## **Tasojen luonti**
 
-Luodaan uusi GeoPackage, johon kerättävät paikkatiedot tullaan lisäämään eri tasoina (ylävalikosta **Tasot \> Luo taso \> Uusi GeoPackage-taso...**).  Valitse **Tietokanta**-kohdasta GeoPackagen tallennuspaikaksi sama kansio jossa itse QGIS-projekti sijaitsee. Tämä onnistuu painamalla **Tietokanta**-kohdan oikealta puolelta (painike, jossa 3 pistettä) ja navigoimalla kyseiseen kansioon. Anna GeoPackage-tiedoston nimeksi **Puu-inventointi** ja paina Tallenna/Save. Seuraavan kohdan **Taulun nimeksi** (eli luotavan tason nimeksi) tulee nyt automaattisesti tämä äsken annettu tiedoston nimi. Koska aiomme kuitenkin lisätä samaan GeoPackageen useamman tason, muutetaan **Taulun nimi** -kohtaan nimeksi nyt **Puut**. Valitaan tason geometriatyypiksi **Piste** ja koordinaattijärjestelmäksi **EPSG:4326 - WGS 84**.
+Luodaan uusi GeoPackage, johon kerättävät paikkatiedot tullaan lisäämään eri tasoina (ylävalikosta **Tasot \> Luo taso \> Uusi GeoPackage-taso...**). Valitse **Tietokanta**-kohdasta GeoPackagen tallennuspaikaksi sama kansio jossa itse QGIS-projekti sijaitsee. Tämä onnistuu painamalla **Tietokanta**-kohdan oikealta puolelta (painike, jossa 3 pistettä) ja navigoimalla kyseiseen kansioon. Anna GeoPackage-tiedoston nimeksi **Puu-inventointi** ja paina Tallenna/Save. Seuraavan kohdan **Taulun nimeksi** (eli luotavan tason nimeksi) tulee nyt automaattisesti tämä äsken annettu tiedoston nimi. Koska aiomme kuitenkin lisätä samaan GeoPackageen useamman tason, muutetaan **Taulun nimi** -kohtaan nimeksi nyt **Puut**. Valitaan tason geometriatyypiksi **Piste** ja koordinaattijärjestelmäksi **EPSG:4326 - WGS 84**.
 
 ![](img/harjoitus_2/image2.png)
 
 Lisätään vielä **Uusi kenttä** -kohdasta joitakin peruskenttiä tason ominaisuus-taulukkoon. Lisätään ensin **laji**-niminen kenttä ja valitaan alasvetovalikosta tyypiksi **teksti** (**Text Data**). Painetaan **Lisää kenttälistaan** -nappia. Lisätään lisäksi **korkeus**-kenttä kokonaisluku-tyyppisenä sekä **ympärysmitta** desimaalinumerona (double), sekä **valokuva** teksti-tyyppinä (tästä lisää myöhemmin). Muista klikata jokaisen kentän tietojen täytön jälkeen **Lisää kenttälistaan.**
 
-Lisätään tämän jälkeen vielä seuraavat datan hallintaan/ **metatietoihin** liittyvät kentät: 
+Lisätään tämän jälkeen vielä seuraavat datan hallintaan/ **metatietoihin** liittyvät kentät:
 
 -   **uuid** (tyyppi: teksti)
 
