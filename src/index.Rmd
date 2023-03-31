@@ -16,8 +16,6 @@ documentclass: book
 
 <!-- Harjoitukset -->
 
-# 
-
 # **Paikkatiedon mobiilikeruu QFieldillä**
 
 \
@@ -52,6 +50,8 @@ Perimmäinen syy QFieldin käyttöön on tietysti paikkatietoaineistojen hyödyn
 
 -   **QField on suomenkielinen**. QField-käyttöliittymä on suomennettu. Myös ruotsinkielinen versio on käytettävissä ilman lisäkustannuksia. Käyttöohjeita, web-sivustoja ja muita materiaaleja kehitetään ja suomennetaan jatkuvasti.
 
+\
+
 ## Lukuohje
 
 **Web-selaimessa** suoritettavat komennot on merkitty seuraavasti:
@@ -78,8 +78,7 @@ sudo lsb_release -a
 SELECT version();
 :::
 
-*
-QField GITHUBiin
+-   QField GITHUBiin
 
 \
 
@@ -89,8 +88,17 @@ Ohessa muutamia web-sivustoja, joista saat lisätietoja:
 
 ::: note-box
 <https://qfield.org>\
+:::
+
+::: note-box
 <https://qfield.org/docs/index.html>\
+:::
+
+::: note-box
 <http://gis.stackexchange.com/>\
+:::
+
+::: note-box
 <http://www.osgeo.fi>\
 :::
 
