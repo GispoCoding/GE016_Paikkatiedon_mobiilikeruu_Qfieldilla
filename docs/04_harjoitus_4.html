@@ -7,7 +7,7 @@
 <meta charset="utf-8" />
 <meta name="generator" content="pandoc" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Paikkatiedon mobiilikeruu Qfieldissä" />
+<meta property="og:title" content="14 Harjoitus 4: Relaatioiden käyttö | Paikkatiedon mobiilikeruu Qfieldissä" />
 <meta property="og:type" content="book" />
 
 
@@ -19,9 +19,9 @@
 <meta name="date" content="2023-03-31" />
 
 
-<meta name="description" content="Paikkatiedon mobiilikeruu Qfieldissä">
+<meta name="description" content="14 Harjoitus 4: Relaatioiden käyttö | Paikkatiedon mobiilikeruu Qfieldissä">
 
-<title>Paikkatiedon mobiilikeruu Qfieldissä</title>
+<title>14 Harjoitus 4: Relaatioiden käyttö | Paikkatiedon mobiilikeruu Qfieldissä</title>
 
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
@@ -139,110 +139,66 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 </div>
 <div class="row">
 <div class="col-sm-12">
-<!-- This title section is only rendered to index.html -->
-<div id="title-container">
-
-<h1 id="title-header">Paikkatiedon mobiilikeruu Qfieldissä</h1>
-
-<h4 class="author">Gispo Oy</h4>
-
-<h4 id="build-date">Version: 2023-03-31</h4>
-
-<div class="abstract"><p>Peruskurssi Qfield-lisäosan ja mobiilisovelluksen käytöstä.</p></div>
-
+<div id="harjoitus-4-relaatioiden-käyttö" class="section level1" number="14">
+<h1><span class="header-section-number">14</span> <strong>Harjoitus 4: Relaatioiden käyttö</strong></h1>
+<p><strong>Harjoituksen sisältö</strong></p>
+<p>Harjoituksessa luodaan QGIS-projektiin uusi Kasvualusta-taso, jonka avulla kerättäviin Puut-tason kohteisiin lisätään tietoa näiden kasvupaikasta. Tasojen välille luodaan relaatio, jonka avulla kyseinen vanhempi-lapsi -suhde saadaan kohteille rakennettua.</p>
+<p><strong>Harjoituksen tavoite</strong></p>
+<p>Koulutettava oppii määrittelemään relaatioita tasojen välille QGISin projektin asetuksia käyttäen ja ottamaan tässä huomioon QFieldin ja mobiilikeruun ominaispiirteet.</p>
+<p><strong>Arvioitu kesto</strong></p>
+<p>30 min.</p>
 </div>
-<!-- Harjoitukset -->
-<div id="paikkatiedon-mobiilikeruu-qfieldillä" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> <strong>Paikkatiedon mobiilikeruu QFieldillä</strong></h1>
-<p><br />
-</p>
-<div id="tervetuloa-qfield-peruskurssille" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> <strong>Tervetuloa QField-peruskurssille!</strong></h2>
-<p>Tämän kurssin tarkoituksena on opastaa sinut QField–ohjelmiston käyttöön. QField hyödyntää QGIS-ohjelmistoa, ja oletuksena on, että ainakin perusteet QGISista on jo opittu. Muiden paikkatieto-ohjelmistojen käyttökokemus ei ole välttämätöntä koulutukseen osallistumiselle. Toki niistä on paljon hyötyä. Kysy rohkeasti opettajalta lisätietoja, jos käytetty terminologia tai joku muu asia jää epäselväksi.</p>
-<p><br />
-</p>
+<div id="valmistautuminen-3" class="section level1" number="15">
+<h1><span class="header-section-number">15</span> <strong>Valmistautuminen</strong></h1>
+<p>Avaa QGIS tietokoneellasi ja avaa siellä aiemmin luomasi QGIS-projekti (<strong>Projekti &gt; Avaa</strong>), siirry oikeaan kansioon, valitse projektitiedosto (<strong>“QField-kurssiprojekti”)</strong> ja paina <strong>Avaa</strong>.</p>
 </div>
-<div id="qfieldin-taustaa" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> <strong>QFieldin taustaa</strong></h2>
-<p>QField mobiililaitteille tarkoitettu avoimen lähdekoodin paikkatieto-ohjelmisto. QFieldin pääkehittäjänä toimii sveitsiläinen yritys nimeltä OpenGIS.ch ja sovelluksen kehittämisen voidaan katsoa alkaneen jo vuonna 2011. QFieldin toiminnallisuudet ovat kehittyneet viime vuosina huimasti, ja se onkin käytössä paikkatiedon keruun mobiiliratkaisuna maailmalla melko laajasti. QFieldin käyttäjämäärää on melko vaikea arvioida, sillä ohjelmistoa ei tarvitse rekisteröidä, sitä voi käyttää useilla laitteilla samanaikaisesti ja jakaa edelleen vapaasti. Arvio kuukausittain QFieldiä käyttävistä on noin satatuhatta käyttäjää, sovelluksen kunkin version latausten määrä liikkuu puolestaan muutamassa sadassa tuhannessa kappaleessa</p>
-<p>QField–ohjelmisto on suunniteltu hyvin yhteensopivaksi QGIS-työpöytäohjelmiston kanssa, ja sikäli täydentää senkin käyttäjäkuntaa ja käyttötapauksia. Tämän lyhyen kurssin aikana käsittelemme vain osaa QFieldin kaikista toiminnallisuuksista. Kurssin perusteella sinun tulisi kuitenkin oppia QFieldin käytön perusteet, ja pystyä käyttämämään oppimaasi omaan käyttötarkoitukseesi.</p>
-<p><br />
-</p>
+<div id="kasvualusta-taso" class="section level1" number="16">
+<h1><span class="header-section-number">16</span> <strong>Kasvualusta-taso</strong></h1>
+<p>Luodaan nyt uusi taso, joka mahdollistaa yhden tai useamman tiedon (ns. lapsi-kohde/child) liittämiseen kuhunkin Puut-tason kohteeseen (vanhempi-kohde/parent). Kerätään siis puulajien lisäksi summittaista tietoa näiden kasvupaikoista, esimerkiksi maanpinnan koostumuksesta n. 5 metrin säteellä rungosta. Koska tämän säteen sisällä maanpinta voi koostua useammanlaisesta aineksesta, voi yhteen puuhun täten liittyä useampi tämän uuden tason kohde.</p>
+<p>Lisätään muut tasot sisältävään GeoPackageen uusi taso (<strong>Tasot &gt; Luo Taso &gt; Uusi GeoPackage-taso…</strong> ). Kuten ennenkin, navigoidaan nyt <strong>Tietokanta</strong>-kohdasta aiemmin luotu <strong>Puu-inventointi</strong> -GeoPackage-tietokanta. Muutetaan nyt taulun nimeksi <strong>Kasvualusta</strong>, geometriatyypiksi <strong>Ei geometriaa</strong>, sillä sillä ei ole tässä merkitystä (kaikille samanlainen 5 m ympyrä). Ominaisuustietokentiksi voimme määrittää <strong>tyyppi</strong> (teksti), <strong>osuus</strong> (integer), <strong>uuid</strong> (teksti), <strong>fk_puut</strong> (teksti), <strong>luoja</strong> (teksti) sekä <strong>luontiaika</strong> (päivämäärä ja aika). Paina sitten OK. Esiin ponnahtaa jälleen ikkuna, jossa ilmoitetaan tiedoston jo olevan olemassa ja kysytään mitä sillä halutaan tehdä. Kuten ennenkin, valitse <strong>Lisää uusi taso</strong>, jolloin samaan GeoPackage-tietokantaan lisätään uusi taso.</p>
 </div>
-<div id="miksi-qfield" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> <strong>Miksi QField?</strong></h2>
-<p>Perimmäinen syy QFieldin käyttöön on tietysti paikkatietoaineistojen hyödyntäminen. Paikkatietoja voi hyödyntää monilla avoimen ja suljetun lähdekoodin ohjelmistolla, mutta tässä muutamia perusteluja juuri QField-ohjelmiston käytölle:</p>
+<div id="relaatioiden-luonti" class="section level1" number="17">
+<h1><span class="header-section-number">17</span> <strong>Relaatioiden luonti</strong></h1>
+<p>Mene QGISin päävalikosta <strong>Projekti</strong> &gt; <strong>Ominaisuudet…</strong> välilehdelle <strong>Relaatiot</strong> ja luo siellä relaatio kohdasta <strong>Lisää relaatio</strong> (vihreästä plus-kuvake). Anna relaatiolle kuvaava nimi, esimerkiksi puut_kasvualusta ja seuraavat kuvanmukaiset asetukset:</p>
 <ul>
-<li><p><strong>QField on ilmainen</strong>. Voit ladata ja asentaa QFieldinilman lisenssi- tai käyttömaksuja. Käyttöön ei sisälly mitään maksuja.</p></li>
-<li><p><strong>QField on vapaa</strong>. Jos tarvitset QFieldiin lisää ominaisuuksia, sinulla on täysi vapaus laajentaa ja muuttaa QFieldiä. Sinun ei tarvitse odottaa seuraavaa versioita ja toivoa, että tarvitsemasi ominaisuudet ovat sisällytetty mukaan. Jos osaat ohjelmoida, voit lisätä ominaisuudet itse. Voit myös rahoittaa uusien ominaisuuksien kehittämistä osaksi QFieldiä.</p></li>
-<li><p><strong>QField kehittyy jatkuvasti</strong>. Kuka tahansa voi lisätä tai rahoittaa uusia ominaisuuksia QFieldiin ja siksi ohjelmisto kehittyy kiihtyvällä vauhdilla. Erilaisten lisäosien avulla on helppo toteuttaa omia prosesseja tukevia toimintoja.</p></li>
-<li><p><strong>QField on hyvin dokumentoitu</strong>. QField sisältää laajan dokumentaation. Koko ajan kasvava käyttäjäyhteisö auttaa mielellään uusia käyttäjiä ja voit myös kysyä apua suoraan sovelluskehittäjiltä.</p></li>
-<li><p><strong>QGIS on järjestelmäriippumaton</strong>. QFieldiä kehitetään Android-käyttöjärjestelmän ohella Windows-, ja iOS-mobiililaitteille.</p></li>
-<li><p><strong>QField on suomenkielinen</strong>. QField-käyttöliittymä on suomennettu. Myös ruotsinkielinen versio on käytettävissä ilman lisäkustannuksia. Käyttöohjeita, web-sivustoja ja muita materiaaleja kehitetään ja suomennetaan jatkuvasti.</p></li>
+<li><p>Referenced layer (parent): Puut</p></li>
+<li><p>Referenced field: uuid</p></li>
+<li><p>Referencing layer (child): Kasvualusta</p></li>
+<li><p>Referencing field: fk_puut</p></li>
+<li><p>Relationship strength: Association</p></li>
 </ul>
-<p><br />
-</p>
+<p>Paina OK ja uudelleen OK sulkeaksesi projektin ominaisuudet saattaaksesi asetukset voimaan.</p>
+<p><img src="img/harjoitus_4/image1.png" /></p>
 </div>
-<div id="lukuohje" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Lukuohje</h2>
-<p><strong>Web-selaimessa</strong> suoritettavat komennot on merkitty seuraavasti:</p>
-<div class="note-box">
-<p><a href="http://localhost:8080/geoserver" class="uri">http://localhost:8080/geoserver</a></p>
-</div>
-<p><strong>Komentorivillä</strong> suoritettavat komennot on merkitty seuraavasti:</p>
-<div class="commandline-box">
-<p>sudo lsb_release -a</p>
-</div>
-<p><strong>Tiedostojen sisältö</strong> on esitetty seuraavasti:</p>
-<div class="file-content-box">
-<p>#IPv4 local connections: #host all all 127.0.0.1/32 md5</p>
-</div>
-<p><strong>HTML- ja CSS-koodit, SQL-komennot sekä Python-scriptit</strong> on esitetty seuraavasti:</p>
-<div class="code-box">
-<p>SELECT version();</p>
-</div>
+<div id="lomakkeen-asetusten-määrittäminen" class="section level1" number="18">
+<h1><span class="header-section-number">18</span> <strong>Lomakkeen asetusten määrittäminen</strong></h1>
+<p>Määritetään nyt miten Puut-tason kohteisiin liitettävien Kasvualusta-tason tiedot syötetään. Klikkaa siis QGISissa Kasvualusta-tason kohdalta hiiren oikealla näppäimellä ja valitse <strong>Ominaisuudet…</strong> ja sieltä <strong>Attribuuttilomake</strong>-välilehti. Valitseylhäältä pudotusvalikosta <strong>Drag and Drop Designer</strong> (suom. Raahaa ja pudota -muokkain). Muokkaa lomaketta siten, että Lomakenäkymä-kohtaan tulee vain kuvassa näkyvät kentät, eli <strong>tyyppi</strong>, <strong>osuus</strong>, <strong>luoja</strong> sekä <strong>luontiaika</strong>. Näiden kenttien syöttötavat ovat hyvin samantapaisia kuin ne, joita olemme käsitelleet jo aikaisemmin.</p>
+<p><img src="img/harjoitus_4/image2.png" /></p>
+<p>Määritä näiden jäljelle jäävien kenttien syöttötavat siis seuraavasti:</p>
 <ul>
-<li>QField GITHUBiin</li>
+<li><p>Tyyppi: <strong>arvoluettelo</strong>, jossa arvoja esimerkiksi <strong>metsä</strong>, <strong>hiekka</strong>, <strong>rakennettu</strong>, <strong>muu</strong></p></li>
+<li><p>Osuus: Rajat-widget liukusäätimellä (kts. kuva yllä). Tämä viittaa kunkin kasvualustatyypin prosentuaaliseen osuuteen</p></li>
+<li><p>Luoja ja luontiaika: kuten Puut-tason lomakkeelle</p></li>
+<li><p>uuid (Käytettävissä olevat widgetit -sarakkeessa): muuta ei-muokattavaksi ja aseta oletusarvoksi funktio uuid()</p></li>
+<li><p>fk_puut: tälle ei tarvitse tässä tehdä muutoksia</p></li>
 </ul>
-<p><br />
-</p>
+<p>Lisätään vielä Kasvualusta-tason kohteillekin tunniste QFieldin kohdelistausta varten. Mene siis vielä Tason ominaisuudet -ikkunassa Näyttö-välilehdelle, ja kirjoita lauseke, jossa on yhdistetty kasvualustan tyyppi ja osuus. Katso alla olevasta kuvasta mallia. Paina tämän jälkeen OK.</p>
+<p><img src="img/harjoitus_4/image3.png" /></p>
+<p>Lisätään <strong>puut_kasvualusta</strong> -relaatio vielä <strong>Puut-tason</strong> attribuuttilomakkeeseen kuvan mukaisesti. Eli avaa Puut-tason ominaisuudet, ja raahaa Attribuuttilomake-välilehden Drag and Drop Designer -näkymässä käytettävissä olevista widgeteistä lomakenäkymä-sarakkeen perustieto-välilehden viimeiseksi kentäksi:</p>
+<p><img src="img/harjoitus_4/image4.png" /></p>
+<p>Paina lopuksi OK. Tallenna myös projekti (<strong>Projekti &gt; Tallenna</strong>). Pakkaa ja synkronoi muokattu projektitiedosto jälleen QField Sync -lisäosalla. Konfiguroi nyt lisätty Kasvualusta-taso kuten aiemmatkin tasot (Offline). Siirrä lisäosan pakkaama kansio lopuksi mobiililaitteeseen. Kun olet valmis, tallenna projektitiedosto kurssihakemistoon pikanäppäimellä <strong>CTRL + T</strong> tai päävalikosta <strong>Projekti &gt; Tallenna</strong>.</p>
 </div>
-<div id="mistä-lisätietoja" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> <strong>Mistä lisätietoja?</strong></h2>
-<p>Ohessa muutamia web-sivustoja, joista saat lisätietoja:</p>
-<div class="note-box">
-<p><a href="https://qfield.org" class="uri">https://qfield.org</a><br />
-</p>
-</div>
-<div class="note-box">
-<p><a href="https://qfield.org/docs/index.html" class="uri">https://qfield.org/docs/index.html</a><br />
-</p>
-</div>
-<div class="note-box">
-<p><a href="http://gis.stackexchange.com/" class="uri">http://gis.stackexchange.com/</a><br />
-</p>
-</div>
-<div class="note-box">
-<p><a href="http://www.osgeo.fi" class="uri">http://www.osgeo.fi</a><br />
-</p>
-</div>
-<p><br />
-</p>
-</div>
-<div id="virheet" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> <strong>Virheet</strong></h2>
-<p>Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä kouluttajalle tai sähköpostilla info@gispo.fi-osoitteeseen.</p>
-<p><br />
-</p>
-</div>
-<div id="lisenssi-ja-oikeudet" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> Lisenssi ja oikeudet</h2>
-<p>Nämä materiaalit on “Paikkatiedon mobiilikeruu QFieldillä”-kurssille kehittänyt Gispo Oy. Materiaalit on lisensoitu seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a></p>
+<div id="lapsikohteiden-luominen-qfieldissä" class="section level1" number="19">
+<h1><span class="header-section-number">19</span> <strong>Lapsikohteiden luominen QFieldissä</strong></h1>
+<p>Avaa jälleen kurssiprojekti viimeisine muutoksineen QFieldissä. Luodaan nyt Puut-tasolle uusi kohde, jolle lisätään lapsikohteena tietoa kasvualustasta. Aktivoi digitointitila QFieldissä ja valitse Puut-taso. Digitoi tasolle uusi piste. Attribuuttilomakkeen ilmestyessä huomaat, että perustiedot-välilehdelle on ilmestynyt <strong>puut_kasvualusta</strong> -valinta, joka on mahdollista aktivoida täytettyäsi vaadittavat tiedot Puut-tasolle lisättävästä kohteesta. Täytä tarvittavat tiedot, ja lisää digitoimallesi puulle sen kasvualustatyyppi / -tyypit. Huomaa, että voit lisätä monta eri lapsikohdetta, tässä tapauksessa kasvualustatyyppiä.</p>
+<p><img src="img/harjoitus_4/image5.png" /></p>
+<p><img src="img/harjoitus_4/image6.png" /></p>
+<p><img src="img/harjoitus_4/image7.png" /></p>
 
-</div>
 </div>
 <p style="text-align: center;">
-<a href="01_harjoitus_1.html"><button class="btn btn-default">Next</button></a>
+<a href="03_harjoitus_3.html"><button class="btn btn-default">Previous</button></a>
+<a href="05_harjoitus_5.html"><button class="btn btn-default">Next</button></a>
 </p>
 </div>
 </div>

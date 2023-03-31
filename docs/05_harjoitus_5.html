@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<!-- Based on TemplateMo 553 Xtra Blog: https://templatemo.com/tm-553-xtra-blog -->
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="20 Harjoitus 5: QFieldin lisäominaisuudet | Paikkatiedon mobiilikeruu Qfieldissä" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Gispo Oy" />
+
+<meta name="date" content="2023-03-31" />
+
+
+<meta name="description" content="20 Harjoitus 5: QFieldin lisäominaisuudet | Paikkatiedon mobiilikeruu Qfieldissä">
+
+<title>20 Harjoitus 5: QFieldin lisäominaisuudet | Paikkatiedon mobiilikeruu Qfieldissä</title>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/hamburgers.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<div class="main-content">
+<!-- special comment to mark beginning of title section for bookdown -->
+<!-- bookdown comments must be in this order: title, toc, body -->
+
+<div class="main-content-wrapper">
+
+<div class="row">
+<div class="col-sm-12">
+<header class="main-toc sidebar" id="sidebar">
+<div class="sidebar-wrapper">
+
+<button class="navbar-toggle hamburger hamburger--collapse" id="navbar-toggle"
+type="button" onclick="navToggle()" aria-label="Toggle navigation">
+<span class="hamburger-box"><span class="hamburger-inner"></span></span>
+</button>
+
+<div class="sidebar-title-wrapper">
+<img alt="Logo" width="100" src="img/gispo_white_sm.png" class="sidebar-logo">
+<div class="sidebar-title"><h1>Paikkatiedon mobiilikeruu Qfieldissä</h1></div>
+<div class="abstract-sidebar"><p>Peruskurssi Qfield-lisäosan ja mobiilisovelluksen käytöstä.</p></div>
+</div>
+
+<nav class="sidebar-nav">
+<div id="TOC" class="toc">
+<ul>
+<li><a href="index.html#paikkatiedon-mobiilikeruu-qfieldillä"><span class="toc-section-number">1</span> <strong>Paikkatiedon mobiilikeruu QFieldillä</strong></a>
+<ul>
+<li><a href="index.html#tervetuloa-qfield-peruskurssille"><span class="toc-section-number">1.1</span> <strong>Tervetuloa QField-peruskurssille!</strong></a></li>
+<li><a href="index.html#qfieldin-taustaa"><span class="toc-section-number">1.2</span> <strong>QFieldin taustaa</strong></a></li>
+<li><a href="index.html#miksi-qfield"><span class="toc-section-number">1.3</span> <strong>Miksi QField?</strong></a></li>
+<li><a href="index.html#lukuohje"><span class="toc-section-number">1.4</span> Lukuohje</a></li>
+<li><a href="index.html#mistä-lisätietoja"><span class="toc-section-number">1.5</span> <strong>Mistä lisätietoja?</strong></a></li>
+<li><a href="index.html#virheet"><span class="toc-section-number">1.6</span> <strong>Virheet</strong></a></li>
+<li><a href="index.html#lisenssi-ja-oikeudet"><span class="toc-section-number">1.7</span> Lisenssi ja oikeudet</a></li>
+</ul></li>
+<li><a href="01_harjoitus_1.html#harjoitus-1-asennus-ja-käyttöönotto"><span class="toc-section-number">2</span> <strong>Harjoitus 1: Asennus ja käyttöönotto</strong></a>
+<ul>
+<li><a href="01_harjoitus_1.html#valmistautuminen"><span class="toc-section-number">2.1</span> <strong>Valmistautuminen</strong></a></li>
+<li><a href="01_harjoitus_1.html#sovelluksen-asentaminen-google-play--kaupasta"><span class="toc-section-number">2.2</span> <strong>Sovelluksen asentaminen Google Play -kaupasta</strong></a></li>
+<li><a href="01_harjoitus_1.html#sovelluksen-avaaminen-ja-käyttöliittymä"><span class="toc-section-number">2.3</span> <strong>Sovelluksen avaaminen ja käyttöliittymä</strong></a></li>
+<li><a href="01_harjoitus_1.html#qfieldin-käyttöliittymä"><span class="toc-section-number">2.4</span> <strong>QFieldin käyttöliittymä</strong></a></li>
+<li><a href="01_harjoitus_1.html#selailutila"><span class="toc-section-number">2.5</span> <strong>Selailutila</strong></a></li>
+</ul></li>
+<li><a href="02_harjoitus_2.html#harjoitus-2-qgis-projektin-valmistelu-synkronointi-ja-digitointi"><span class="toc-section-number">3</span> <strong>Harjoitus 2: QGIS-projektin valmistelu, synkronointi ja digitointi</strong></a></li>
+<li><a href="02_harjoitus_2.html#valmistautuminen-1"><span class="toc-section-number">4</span> <strong>Valmistautuminen</strong></a></li>
+<li><a href="02_harjoitus_2.html#qgis-projektitiedoston-valmistelu"><span class="toc-section-number">5</span> <strong>QGIS-projektitiedoston valmistelu</strong></a>
+<ul>
+<li><a href="02_harjoitus_2.html#projektin-perusasetukset"><span class="toc-section-number">5.1</span> <strong>Projektin perusasetukset</strong></a></li>
+<li><a href="02_harjoitus_2.html#taustakarttojen-lisäys"><span class="toc-section-number">5.2</span> <strong>Taustakarttojen lisäys</strong></a></li>
+<li><a href="02_harjoitus_2.html#tasojen-luonti"><span class="toc-section-number">5.3</span> <strong>Tasojen luonti</strong></a></li>
+</ul></li>
+<li><a href="02_harjoitus_2.html#qfield-sync--lisäosan-asentaminen-ja-käyttö"><span class="toc-section-number">6</span> <strong>QField Sync -lisäosan asentaminen ja käyttö</strong></a></li>
+<li><a href="02_harjoitus_2.html#qgis-projektin-siirto-mobiililaitteeseen"><span class="toc-section-number">7</span> <strong>QGIS-projektin siirto mobiililaitteeseen</strong></a></li>
+<li><a href="02_harjoitus_2.html#projektin-avaaminen-qfieldissä"><span class="toc-section-number">8</span> <strong>Projektin avaaminen QFieldissä</strong></a></li>
+<li><a href="02_harjoitus_2.html#digitointitila"><span class="toc-section-number">9</span> <strong>Digitointitila</strong></a></li>
+<li><a href="03_harjoitus_3.html#harjoitus-3-lomakkeet"><span class="toc-section-number">10</span> <strong>Harjoitus 3: Lomakkeet</strong></a></li>
+<li><a href="03_harjoitus_3.html#valmistautuminen-2"><span class="toc-section-number">11</span> <strong>Valmistautuminen</strong></a></li>
+<li><a href="03_harjoitus_3.html#taustatietoja"><span class="toc-section-number">12</span> <strong>Taustatietoja</strong></a></li>
+<li><a href="03_harjoitus_3.html#ominaisuustietolomakkeen-muokkaus"><span class="toc-section-number">13</span> <strong>Ominaisuustietolomakkeen muokkaus</strong></a>
+<ul>
+<li><a href="03_harjoitus_3.html#laji-tietokenttä"><span class="toc-section-number">13.1</span> <strong>Laji-tietokenttä</strong></a></li>
+<li><a href="03_harjoitus_3.html#ympärysmitta--ja-korkeus--tietokentät"><span class="toc-section-number">13.2</span> <strong>Ympärysmitta- ja korkeus -tietokentät</strong></a></li>
+<li><a href="03_harjoitus_3.html#huomiot-tietokenttä"><span class="toc-section-number">13.3</span> <strong>Huomiot-tietokenttä</strong></a></li>
+<li><a href="03_harjoitus_3.html#valokuva"><span class="toc-section-number">13.4</span> <strong>Valokuva</strong></a></li>
+<li><a href="03_harjoitus_3.html#luoja--ja-muokkaaja--tietokenttien-automatisointi"><span class="toc-section-number">13.5</span> <strong>Luoja- ja muokkaaja -tietokenttien automatisointi</strong></a></li>
+<li><a href="03_harjoitus_3.html#luonti--ja-muokkausaika--tietokentät"><span class="toc-section-number">13.6</span> <strong>Luonti- ja muokkausaika -tietokentät</strong></a></li>
+<li><a href="03_harjoitus_3.html#kohteen-uuid-kenttä"><span class="toc-section-number">13.7</span> <strong>Kohteen uuid-kenttä</strong></a></li>
+<li><a href="03_harjoitus_3.html#lomakkeen-välilehdet"><span class="toc-section-number">13.8</span> <strong>Lomakkeen välilehdet</strong></a></li>
+<li><a href="03_harjoitus_3.html#näyttö-ja-kohdelistaus"><span class="toc-section-number">13.9</span> <strong>Näyttö ja kohdelistaus</strong></a></li>
+<li><a href="03_harjoitus_3.html#tarttumisen-asetukset"><span class="toc-section-number">13.10</span> <strong>Tarttumisen asetukset</strong></a></li>
+<li><a href="03_harjoitus_3.html#lomakkeet-qfieldissä"><span class="toc-section-number">13.11</span> <strong>Lomakkeet QFieldissä</strong></a></li>
+</ul></li>
+<li><a href="04_harjoitus_4.html#harjoitus-4-relaatioiden-käyttö"><span class="toc-section-number">14</span> <strong>Harjoitus 4: Relaatioiden käyttö</strong></a></li>
+<li><a href="04_harjoitus_4.html#valmistautuminen-3"><span class="toc-section-number">15</span> <strong>Valmistautuminen</strong></a></li>
+<li><a href="04_harjoitus_4.html#kasvualusta-taso"><span class="toc-section-number">16</span> <strong>Kasvualusta-taso</strong></a></li>
+<li><a href="04_harjoitus_4.html#relaatioiden-luonti"><span class="toc-section-number">17</span> <strong>Relaatioiden luonti</strong></a></li>
+<li><a href="04_harjoitus_4.html#lomakkeen-asetusten-määrittäminen"><span class="toc-section-number">18</span> <strong>Lomakkeen asetusten määrittäminen</strong></a></li>
+<li><a href="04_harjoitus_4.html#lapsikohteiden-luominen-qfieldissä"><span class="toc-section-number">19</span> <strong>Lapsikohteiden luominen QFieldissä</strong></a></li>
+<li><a href="05_harjoitus_5.html#harjoitus-5-qfieldin-lisäominaisuudet"><span class="toc-section-number">20</span> <strong>Harjoitus 5: QFieldin lisäominaisuudet</strong></a></li>
+<li><a href="05_harjoitus_5.html#valmistautuminen-4"><span class="toc-section-number">21</span> <strong>Valmistautuminen</strong></a></li>
+<li><a href="05_harjoitus_5.html#haku-toiminnot"><span class="toc-section-number">22</span> <strong>Haku-toiminnot</strong></a></li>
+<li><a href="05_harjoitus_5.html#laitteen-paikannuksen-käyttäminen"><span class="toc-section-number">23</span> <strong>Laitteen paikannuksen käyttäminen</strong></a></li>
+<li><a href="05_harjoitus_5.html#tracking--eli-jäljitys-toiminto"><span class="toc-section-number">24</span> <strong>Tracking- eli jäljitys-toiminto</strong></a></li>
+<li><a href="05_harjoitus_5.html#edistyneemmät-digitointityökalut"><span class="toc-section-number">25</span> <strong>Edistyneemmät digitointityökalut</strong></a>
+<ul>
+<li><a href="05_harjoitus_5.html#tarttuminen-sekä-topologinen-editointi"><span class="toc-section-number">25.0.1</span> <strong>Tarttuminen sekä topologinen editointi</strong></a></li>
+<li><a href="05_harjoitus_5.html#taitepiste--ja-halkaisutyökalut"><span class="toc-section-number">25.0.2</span> <strong>Taitepiste- ja halkaisutyökalut</strong></a></li>
+</ul></li>
+<li><a href="06_harjoitus_6.html#harjoitus-6-kenttätyöt-ja-tietojen-yhdistäminen"><span class="toc-section-number">26</span> <strong>Harjoitus 6: Kenttätyöt ja tietojen yhdistäminen</strong></a></li>
+<li><a href="06_harjoitus_6.html#valmistautuminen-5"><span class="toc-section-number">27</span> <strong>Valmistautuminen</strong></a></li>
+<li><a href="06_harjoitus_6.html#lyhyt-ohjeistus-kenttätöihin"><span class="toc-section-number">28</span> <strong>Lyhyt ohjeistus kenttätöihin</strong></a></li>
+<li><a href="06_harjoitus_6.html#tietojen-synkronoiminen-takaisin-tietokoneelle"><span class="toc-section-number">29</span> <strong>Tietojen synkronoiminen takaisin tietokoneelle</strong></a></li>
+</ul>
+</div>
+</nav>
+</div>
+</header>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="harjoitus-5-qfieldin-lisäominaisuudet" class="section level1" number="20">
+<h1><span class="header-section-number">20</span> <strong>Harjoitus 5: QFieldin lisäominaisuudet</strong></h1>
+<p><strong>Harjoituksen sisältö</strong></p>
+<p>Harjoituksessa syvennytään QFieldin edistyneempiin ominaisuuksiin joita ei vielä ole käsitelty, ja jotka voivat olla hyödyllisiä paikkatietojen mobiilikeruun tehostamiseksi käytännössä</p>
+<p><strong>Harjoituksen tavoite</strong></p>
+<p>Koulutettava oppii käyttämään etenkin mobiililaitteen paikannusta mobiilikeruun tehostamiseksi QFieldin kanssa toimiessa. |</p>
+<p><strong>Arvioitu kesto</strong></p>
+<p>30 min.</p>
+</div>
+<div id="valmistautuminen-4" class="section level1" number="21">
+<h1><span class="header-section-number">21</span> <strong>Valmistautuminen</strong></h1>
+<p>Avaa QField, ja klikkaa sen etusivulta viimeisin versio QField-kurssiprojektista. Tämän harjoituksen aikana voi helpottaa jos pystyt hieman liikkumaan lähiympäristössä. Varaudu siis tarvittaessa käymään lyhyesti esimerkiksi ulkona.</p>
+</div>
+<div id="haku-toiminnot" class="section level1" number="22">
+<h1><span class="header-section-number">22</span> <strong>Haku-toiminnot</strong></h1>
+<p>QFieldin karttanäkymän oikeassa yläkulmassa on suurennuslasin kuva. Klikkaa sitä, jolloin aukeaa hakukenttä ja näppäimistö. Haku toimii automaattisesti monella tavalla. Sillä pystyy hakemaan:</p>
+<ul>
+<li><p>Projektissa olevista vektoritasoista, mikäli hakeminen tasoista on sallittu (tämän voi konfiguroida QGISissa: Projekti &gt; Ominaisuudet… &gt; Tietolähteet-välilehti &gt; Etsittävissä oleva). Hakutuloksissa voi klikata joko kohteen nimeä (display name), jolloin kartta kohdistuu kyseiseen kohteeseen, tai sen oikealla puolella attribuuttilomake-ikoniin, jolloin kohteen attribuutti-tiedot aukeavat.</p></li>
+<li><p>koordinaatteja (WGS84-koordinaatit sekä projektin koordinaattisysteemi toimivat)</p></li>
+<li><p>Suomen alueella olevista osoitteista</p></li>
+</ul>
+<p>Testataan nyt lyhyesti kutakin tapaa. Hae:</p>
+<ul>
+<li><p>Osoitteen perusteella: esimerkiksi “<strong>Hämeentie</strong>”.</p></li>
+<li><p>WGS84-koordinaateilla (leveys- ja pituusasteet), esimerkkiarvot X=24.053647, Y=68.074888. Kirjoita hakukenttään muodossa <strong>24.053647, 68.074888</strong></p></li>
+<li><p>Vektoritason kohteen avulla: voit hakea Puut-tasosta esimerkiksi jonkin puulajin nimellä.<br />
+</p></li>
+</ul>
+</div>
+<div id="laitteen-paikannuksen-käyttäminen" class="section level1" number="23">
+<h1><span class="header-section-number">23</span> <strong>Laitteen paikannuksen käyttäminen</strong></h1>
+<p>Kun paikannus laitteen GPS:llä on sallittu, pystyy kartan keskittämään omaan sijaintiin oikean alareunan paikannus-napilla. Tätä voi hyödyntää myös lisättäessä tasoille uusia kohteita. Kun digitointi-tila on päällä, tulee paikannus-napin yläpuolelle toinen, samankaltainen valkoharmaa tähtäinristikon näköinen painike. Painamalla tätä kohteen lisäämiseen tarkoitettu painike lukittuu seuraamaan käyttäjän sijaintia tämän liikkuessakin, jolloin tähtäinristikkoa ei tarvitse joka kerta asettaa käsin kohteita lisättäessä, vaan riittää että siirtyy siihen kohtaan johon piste (tai taitepiste) on lisättävä. Painamalla samaa painiketta uudelleen, tähtäin ei ole enää paikannuksen kanssa lukkiutunut, vaan näytön keskellä.</p>
+<p>Testaa nyt näiden kahden paikannusnapin käyttöä, jotta niiden sujuva käyttö kenttätöissä (seuraava harjoitus) onnistuu. Varsinkin tähtäinristikon lukittumisen toteamiseksi joutunet liikkumaan hieman esimerkiksi ulkona rakennuksesta tms. Voit käyttää tähän n. 5 minuuttia.</p>
+<p>Tarkastellaan tämän jälkeen vielä paikannusasetuksia. Avaa valikko ja sieltä rattaan näköisestä kuvakkeesta Asetukset, josta puolestaan Paikannus-välilehti. Aseta aktiivisiksi valinnat (jos ei ennen valittu):</p>
+<ul>
+<li><p>Näytä sijainnin tiedot</p></li>
+<li><p>Aktivoi tarkkuusindikaattori</p></li>
+</ul>
+<p>Huonon ja hyvän paikannustarkkuuden arvot voit pitää oletusarvoissa (Hyvä/Huono tarkkuus alla/yllä). Jos lisäksi aktivoit kohdan “Ota käyttöön tarkkuusvaatimus”, QField ei digitoidessa suostu lisäämään pistettä tai taitepistettä mikäli GPS:n tai vastaavan tarkkuus on liian huono (huono tarkkuus -ehto). Voit nyt testata tätä (esimerkiksi sisätiloissa), mutta jätä tämä tarkkuusvaatimus lopulta ottamatta käyttöön. Kun palaat karttanäkymään, näkyy alareunassa tiedot koordinaateista, paikannuksen tarkkuudesta sekä nopeudesta.</p>
+</div>
+<div id="tracking--eli-jäljitys-toiminto" class="section level1" number="24">
+<h1><span class="header-section-number">24</span> <strong>Tracking- eli jäljitys-toiminto</strong></h1>
+<p>Kun laitteen sisäisen tai siihen mahdollisesti yhdistetyn ulkoisen GNSS-laitteen paikannustoiminto on sallittu, voidaan viiva- ja monikulmio-tasojen yhteydessä käyttää jäljitys-toimintoa. Sen avulla pystytään esimerkiksi kuljettu reitti tallentamaan automaattisesti tai monikulmio-kohde muodostamaan yksinkertaisesti kulkemalla alueen rajaviiva ympäri.</p>
+<p>Avaa nyt vasemman yläkulman valikko ja tee pitkä painallus <strong>Reitti</strong>-tasolle (viiva-geometria). Tällöin aukeaa ikkuna lisätoiminnoille. Listassa alimpana on <strong>Aseta seuranta</strong>. Klikkaa sitä. Aukeaa ikkuna, jossa voidaan määrittää seuraavat asetukset</p>
+<ul>
+<li><p>Minimiaika (sekunteina)</p></li>
+<li><p>Minimietäisyys (metreinä)</p></li>
+</ul>
+<p>Nämä yhdessä tai erikseen määrittävät minimiarvot milloin QField lisää tässä seuranta-moodissa taitepisteen (vertex) Reitti-tasolle. Lisäksi mikäli viimeinen kohta:</p>
+<ul>
+<li>Digitoi piste ainoastaan kun molemmat ehdot täyttyvät</li>
+</ul>
+<p>on valittuna, taitepisteen digitointi tapahtuu vain, jos molemmat ehdot on asetettu aktiiviseksi, ja jos ne myös täyttyvät. Jos siis esimerkiksi on valittuna oletusarvot 30 s ja 50 m, piste lisätään vasta kun aikaa edellisen pisteen lisäämisestä on kulunut ainakin 30 sekuntia mutta toisaalta vasta sitten kun myös etäisyys viimeisimpään pisteeseen on vähintään 50 metriä.</p>
+<p>Aseta nyt minimiaika -asetukseksi 10 s, merkkaa asetuksen valintalaatikosta asetus aktiiviseksi mutta jätä minimietäisyys-asetus valitsematta. Sulje jäljityksen asetukset painamalla <strong>Aloita jäljitys</strong>. Tämän jälkeen QField pyytää syöttämään Reitti-tasolle lisättävän kohteen tiedot, jonka jälkeen reitin muodostuminen jäljitys-menetelmällä voi alkaa. Kirjoita kohteen tyyppi-kenttään vaikkapa “testi”. Voit jättää muut kentät tyhjiksi ja klikata jälleen ikkunan vasenta yläkulmaa kohteen lisäämiseksi. Seuranta alkaa. Näet valikon tasolistauksessa <strong>Reitti</strong>-tason perässä vilkkuvan kävelijähahmon. Paikantamalla itsesi kartalla, zoomaamalla reilusti karttaa huomaat kuinka viivatasoon lisätään taitepiste n. 10 sekunnin välein. Tässä kohtaa tietysti auttaa, jos pystyt liikkumaan jonkin verran paikasta toiseen, esimerkiksi ulkona. Huomaa, että seurannan ollessa käynnissä pystyt kuitenkin samalla digitoimaan myös muita tasoja, esimerkiksi lisäämään kohteen <strong>Puut</strong>-tasolle tai vaikkapa toisen kohteen itse <strong>Reitti</strong>-tasolle. Testattuasi seurantaa jonkin aikaa, avaa jälleen valikko, tee <strong>Reitti</strong>-tason kohdalla pitkä painallus jolloin tason lisätoimintojen valinnat aukeaa. Nyt listan alimpana on <strong>Lopeta jäljitys</strong>. Paina sitä jolloin seuranta lakkaa ja kuljettu reitti tallentuu tasolle.</p>
+<p>Voit toistaa prosessin <strong>Alueet</strong>-tasolle. Ainoa oleellinen ero on, että nyt piirretty kohde on monikulmio.</p>
+</div>
+<div id="edistyneemmät-digitointityökalut" class="section level1" number="25">
+<h1><span class="header-section-number">25</span> <strong>Edistyneemmät digitointityökalut</strong></h1>
+<p>Edellä käsitelly jäljitys-toiminnon lisäksi, QFieldissä on mukana useita QGISista tuttuja toiminnallisuuksia, jotka ovat hyödyllisiä etenkin viiva- ja monikulmiotasoja editoidessa: tarttuminen, topologinen editointi, taitepistetyökalu sekä halkaisu-, uudelleenmuotoilu- ja Täytä piiri -työkalut. Tutustutaan nyt näistä yleisempiin.</p>
+<div id="tarttuminen-sekä-topologinen-editointi" class="section level3" number="25.0.1">
+<h3><span class="header-section-number">25.0.1</span> <strong>Tarttuminen sekä topologinen editointi</strong></h3>
+<p>Määritimme harjoituksessa 3 QGIS-projektissa tarttumisen asetukset (etäisyys 15 px jne.). Nämä asetukset ovat tulevat nyt voimaan suoraan QFieldissäkin. Avaa siis QFieldissä valikko, laita editointi-moodi päälle ja Alueet-taso aktiiviseksi. Sulje valikko. Rupea nyt digitoimaan Alueet-tasolle monikulmiokohdetta, esimerkiksi aluerajausta alueelle, jossa tulet suorittamaan puutietojen keräystä seuraavassa harjoituksessa. Lisää siis tarvittavat taitepisteet aluemaiselle kohteelle oikean alakulman mustasta “ristikko”-symbolista. Kun tarvittavat kulmapisteet on lisätty, klikkaa viereisestä vihreästä ruksista ja lisää ominaisuustiedot kohteelle. Tässä vaiheessa riittää lisätä ainoastaan <strong>“Nimi”</strong>-kenttään esimerkiksi <strong>“1. alue”</strong>.</p>
+<p>Koitetaan nyt luoda toinen monikulmio, (“2. alue”) edellisen kylkeen. Klikataan ensinnäkin Topologinen editointi käyttöön vasemmasta yläkulmasta, valikon alapuolelta, jotta luodut monikulmiot ovat topologisesti eheitä, eikä niiden väliin esimerkiksi jää pieniä koloja. Tarttuminen puolestaan voidaan todeta asemoimalla näytön keskellä oleva ristikkotähtäin lähelle äsken luotua 1. aluetta. Tarpeeksi lähelle päästyä tähtäin kutistuu ja muuttuu violetin väriseksi, QGISin vastaavan toiminnallisuuden tapaan. Lisäämällä toisen alueen taitepiste nyt, voimme varmistua että se tulee 1. alueeseen kiinni. Digitoi 2. monikulmio loppuun.</p>
+<p><img src="img/harjoitus_5/image1.png" /></p>
+</div>
+<div id="taitepiste--ja-halkaisutyökalut" class="section level3" number="25.0.2">
+<h3><span class="header-section-number">25.0.2</span> <strong>Taitepiste- ja halkaisutyökalut</strong></h3>
+<p>Luotujen kohteiden geometriaa pystyy jälkikäteen muokkaamaan edellä mainituilla työkaluilla. Nämä työkalut saat käyttöösi valitsemalla geometrian, jota haluat muokata, eli:</p>
+<ul>
+<li><p>Klikkaamalla kohdetta kartalla (esimerkiksi monikulmiota “1. alue”)</p></li>
+<li><p>Valitsemalla kohteen kohdelistasta ja klikkaamalla geometrian editoinnin kuvaketta aukeavan ikkunan yläpalkista (kynä ja viiva taitepisteineen)</p></li>
+<li><p>Klikkaa oikean alakulman vihreästä napista (3 pistettä) digitointityökalut auki</p></li>
+<li><p>valitse haluamasi työkalu</p></li>
+</ul>
+<p>Valitse nyt vasemmanpuolimmaisin, eli <strong>taitepistetyökalu</strong>. Sen valittuasi alariville aukeaa työkaluun liittyvät napit. Valittu taitepiste näkyy kartalla ympyröitynä, taitepisteestä toiseen siirtymisessä voit käyttää nuolia. Karttanäkymää liikuttamalla voit siirtää taitepisteen paikkaa. Klikkaa vihreätä ruksia hyväksyäksesi muutokset, punaista hylätäksesi.</p>
+<p><img src="img/harjoitus_5/image2.png" /></p>
+<p>Testataan vielä <strong>halkaisutyökalua</strong>. Toistetaan samat työkalun valinnan vaiheet kuin edellä, mutta valitaan nyt taitepistetyökalun vierestä seuraava, eli halkaisutyökalu, jonka tunnistaa saksi-ikonista. Nyt alariville jää ainoastaan yksi nappi (“musta tähtäinristikko”). Tällä pystyt piirtämään viivan, joka halkaisee valitun kohteen useampaan osaan. Kun viiva on valmis, klikkaa vihreästä ruksista, jolloin monikulmio-kohde jaetaan. Halkaise nyt luodut alueet kahtia. Voit myös muokata tuloskohteiden ominaisuuksia. Kun olet valmis, voit sulkea QField-sovelluksen.</p>
+<p><img src="img/harjoitus_5/image3.png" /></p>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="04_harjoitus_4.html"><button class="btn btn-default">Previous</button></a>
+<a href="06_harjoitus_6.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+<footer class="footer text-center">
+
+<div class="footer-container text-center">
+
+<div class="footer-info">
+<h5 class="footer-title">Paikkatiedon mobiilikeruu Qfieldissä</h5>
+<span class="footer-version">v2023-03-31</span>
+<div class="license"><img src="img/by-nd.svg" width="80px" alt="CC-BY-ND"></div>
+</div>
+
+<div class="footer-info">
+<h5 class="footer-title footer-company">Gispo Ltd.
+<span class="footer-copyright-year">© 2023</span></h5>
+<span class="footer-contact-info">Kumpulantie 3, 3. krs
+<br>00520 Helsinki, Finland
+<br>info@gispo.fi
+</span>
+</div>
+
+</div>
+</div>
+</footer>
+</div>
+
+
+<script src="js/nav-script.js"></script>
+
+</body>
+</html>
