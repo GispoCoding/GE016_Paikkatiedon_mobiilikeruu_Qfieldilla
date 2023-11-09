@@ -1,22 +1,22 @@
-# **Harjoitus 5: QFieldin lisäominaisuudet**
+# Harjoitus 5: QFieldin lisäominaisuudet
 
-**Harjoituksen sisältö**
+### Harjoituksen sisältö
 
 Harjoituksessa syvennytään QFieldin edistyneempiin ominaisuuksiin joita ei vielä ole käsitelty, ja jotka voivat olla hyödyllisiä paikkatietojen mobiilikeruun tehostamiseksi käytännössä
 
-**Harjoituksen tavoite**
+### Harjoituksen tavoite
 
 Koulutettava oppii käyttämään etenkin mobiililaitteen paikannusta mobiilikeruun tehostamiseksi QFieldin kanssa toimiessa. \|
 
-**Arvioitu kesto**
+### Arvioitu kesto
 
 30 min.
 
-# **Valmistautuminen**
+## Valmistautuminen
 
 Avaa QField, ja klikkaa sen etusivulta viimeisin versio QField-kurssiprojektista. Tämän harjoituksen aikana voi helpottaa jos pystyt hieman liikkumaan lähiympäristössä. Varaudu siis tarvittaessa käymään lyhyesti esimerkiksi ulkona.
 
-# **Haku-toiminnot**
+## Haku-toiminnot
 
 QFieldin karttanäkymän oikeassa yläkulmassa on suurennuslasin kuva. Klikkaa sitä, jolloin aukeaa hakukenttä ja näppäimistö. Haku toimii automaattisesti monella tavalla. Sillä pystyy hakemaan:
 
@@ -34,7 +34,7 @@ Testataan nyt lyhyesti kutakin tapaa. Hae:
 
 -   Vektoritason kohteen avulla: voit hakea Puut-tasosta esimerkiksi jonkin puulajin nimellä.\
 
-# **Laitteen paikannuksen käyttäminen**
+## Laitteen paikannuksen käyttäminen
 
 Kun paikannus laitteen GPS:llä on sallittu, pystyy kartan keskittämään omaan sijaintiin oikean alareunan paikannus-napilla. Tätä voi hyödyntää myös lisättäessä tasoille uusia kohteita. Kun digitointi-tila on päällä, tulee paikannus-napin yläpuolelle toinen, samankaltainen valkoharmaa tähtäinristikon näköinen painike. Painamalla tätä kohteen lisäämiseen tarkoitettu painike lukittuu seuraamaan käyttäjän sijaintia tämän liikkuessakin, jolloin tähtäinristikkoa ei tarvitse joka kerta asettaa käsin kohteita lisättäessä, vaan riittää että siirtyy siihen kohtaan johon piste (tai taitepiste) on lisättävä. Painamalla samaa painiketta uudelleen, tähtäin ei ole enää paikannuksen kanssa lukkiutunut, vaan näytön keskellä.
 
@@ -48,7 +48,7 @@ Tarkastellaan tämän jälkeen vielä paikannusasetuksia. Avaa valikko ja sielt�
 
 Huonon ja hyvän paikannustarkkuuden arvot voit pitää oletusarvoissa (Hyvä/Huono tarkkuus alla/yllä). Jos lisäksi aktivoit kohdan "Ota käyttöön tarkkuusvaatimus", QField ei digitoidessa suostu lisäämään pistettä tai taitepistettä mikäli GPS:n tai vastaavan tarkkuus on liian huono (huono tarkkuus -ehto). Voit nyt testata tätä (esimerkiksi sisätiloissa), mutta jätä tämä tarkkuusvaatimus lopulta ottamatta käyttöön. Kun palaat karttanäkymään, näkyy alareunassa tiedot koordinaateista, paikannuksen tarkkuudesta sekä nopeudesta.
 
-# **Tracking- eli jäljitys-toiminto**
+## Tracking- eli jäljitys-toiminto
 
 Kun laitteen sisäisen tai siihen mahdollisesti yhdistetyn ulkoisen GNSS-laitteen paikannustoiminto on sallittu, voidaan viiva- ja monikulmio-tasojen yhteydessä käyttää jäljitys-toimintoa. Sen avulla pystytään esimerkiksi kuljettu reitti tallentamaan automaattisesti tai monikulmio-kohde muodostamaan yksinkertaisesti kulkemalla alueen rajaviiva ympäri.
 
@@ -68,11 +68,11 @@ Aseta nyt minimiaika -asetukseksi 10 s, merkkaa asetuksen valintalaatikosta aset
 
 Voit toistaa prosessin **Alueet**-tasolle. Ainoa oleellinen ero on, että nyt piirretty kohde on monikulmio.
 
-# **Edistyneemmät digitointityökalut**
+## Edistyneemmät digitointityökalut
 
 Edellä käsitelly jäljitys-toiminnon lisäksi, QFieldissä on mukana useita QGISista tuttuja toiminnallisuuksia, jotka ovat hyödyllisiä etenkin viiva- ja monikulmiotasoja editoidessa: tarttuminen, topologinen editointi, taitepistetyökalu sekä halkaisu-, uudelleenmuotoilu- ja Täytä piiri -työkalut. Tutustutaan nyt näistä yleisempiin.
 
-### **Tarttuminen sekä topologinen editointi**
+## Tarttuminen sekä topologinen editointi
 
 Määritimme harjoituksessa 3 QGIS-projektissa tarttumisen asetukset (etäisyys 15 px jne.). Nämä asetukset ovat tulevat nyt voimaan suoraan QFieldissäkin. Avaa siis QFieldissä valikko, laita editointi-moodi päälle ja Alueet-taso aktiiviseksi. Sulje valikko. Rupea nyt digitoimaan Alueet-tasolle monikulmiokohdetta, esimerkiksi aluerajausta alueelle, jossa tulet suorittamaan puutietojen keräystä seuraavassa harjoituksessa. Lisää siis tarvittavat taitepisteet aluemaiselle kohteelle oikean alakulman mustasta "ristikko"-symbolista. Kun tarvittavat kulmapisteet on lisätty, klikkaa viereisestä vihreästä ruksista ja lisää ominaisuustiedot kohteelle. Tässä vaiheessa riittää lisätä ainoastaan **"Nimi"**-kenttään esimerkiksi **"1. alue"**.
 
@@ -80,7 +80,7 @@ Koitetaan nyt luoda toinen monikulmio, ("2. alue") edellisen kylkeen. Klikataan 
 
 ![](img/harjoitus_5/image1.png)
 
-### **Taitepiste- ja halkaisutyökalut**
+## Taitepiste- ja halkaisutyökalut
 
 Luotujen kohteiden geometriaa pystyy jälkikäteen muokkaamaan edellä mainituilla työkaluilla. Nämä työkalut saat käyttöösi valitsemalla geometrian, jota haluat muokata, eli:
 
