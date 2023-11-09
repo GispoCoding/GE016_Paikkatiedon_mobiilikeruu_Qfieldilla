@@ -10,7 +10,7 @@ Koulutettava oppii määrittelemään relaatioita tasojen välille QGISin projek
 
 ### Arvioitu kesto
 
-30 min.
+30 min
 
 ## Valmistautuminen
 
