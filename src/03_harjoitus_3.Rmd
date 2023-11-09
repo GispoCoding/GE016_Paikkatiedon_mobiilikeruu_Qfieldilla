@@ -12,7 +12,7 @@ Koulutettava oppii muokkaamaan tiedon syöttötapoja QGISin widgettejä käyttä
 
 45 min.
 
-### Valmistautuminen
+## Valmistautuminen
 
 Avaa QGIS tietokoneellasi ja avaa siellä aiemmin luomasi QGIS-projekti (**Projekti \> Avaa**), siirry oikeaan kansioon, valitse projektitiedosto (**"QField-kurssiprojekti")** ja paina **Avaa**.
 
