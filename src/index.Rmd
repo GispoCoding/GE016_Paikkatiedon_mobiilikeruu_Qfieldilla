@@ -102,7 +102,7 @@ Ohessa muutamia web-sivustoja, joista saat lisätietoja:
 
 ## Virheet
 
-Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä kouluttajalle tai sähköpostilla <p><a href="mailto:info@gispo.fi">Send email</a></p> -osoitteeseen.
+Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä kouluttajalle tai sähköpostilla <a href="mailto:info@gispo.fi">info@gispo.fi</a>-osoitteeseen.
 
 \
 
