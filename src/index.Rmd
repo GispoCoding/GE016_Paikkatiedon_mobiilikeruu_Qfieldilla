@@ -1,9 +1,9 @@
 ---
-title: "Paikkatiedon mobiilikeruu Qfieldissä"
+title: "Paikkatiedon mobiilikeruu QFieldissä"
 author: "Gispo Oy"
 date: "`r Sys.Date()`"
 site: "bookdown::bookdown_site"
-abstract: "Peruskurssi Qfield-lisäosan ja mobiilisovelluksen käytöstä."
+abstract: "Peruskurssi QField-mobiilisovelluksen ja QGISin QField-lisäosan käytöstä."
 output:
     bookdown::html_book:
         toc: true
@@ -78,10 +78,6 @@ sudo lsb_release -a
 SELECT version();
 :::
 
--   QField GITHUBiin
-
-\
-
 ## Mistä lisätietoja?
 
 Ohessa muutamia web-sivustoja, joista saat lisätietoja:
@@ -106,7 +102,7 @@ Ohessa muutamia web-sivustoja, joista saat lisätietoja:
 
 ## Virheet
 
-Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä kouluttajalle tai sähköpostilla info\@gispo.fi-osoitteeseen.
+Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä kouluttajalle tai sähköpostilla <p><a href="mailto:info@gispo.fi">Send email</a></p> -osoitteeseen.
 
 \
 
