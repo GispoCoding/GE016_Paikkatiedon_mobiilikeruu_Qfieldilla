@@ -16,17 +16,17 @@ documentclass: book
 
 <!-- Harjoitukset -->
 
-# **Paikkatiedon mobiilikeruu QFieldillä**
+# Paikkatiedon mobiilikeruu QFieldillä
 
 \
 
-## **Tervetuloa QField-peruskurssille!**
+## Tervetuloa QField-peruskurssille!
 
 Tämän kurssin tarkoituksena on opastaa sinut QField--ohjelmiston käyttöön. QField hyödyntää QGIS-ohjelmistoa, ja oletuksena on, että ainakin perusteet QGISista on jo opittu. Muiden paikkatieto-ohjelmistojen käyttökokemus ei ole välttämätöntä koulutukseen osallistumiselle. Toki niistä on paljon hyötyä. Kysy rohkeasti opettajalta lisätietoja, jos käytetty terminologia tai joku muu asia jää epäselväksi.
 
 \
 
-## **QFieldin taustaa**
+## QFieldin taustaa
 
 QField mobiililaitteille tarkoitettu avoimen lähdekoodin paikkatieto-ohjelmisto. QFieldin pääkehittäjänä toimii sveitsiläinen yritys nimeltä OpenGIS.ch ja sovelluksen kehittämisen voidaan katsoa alkaneen jo vuonna 2011. QFieldin toiminnallisuudet ovat kehittyneet viime vuosina huimasti, ja se onkin käytössä paikkatiedon keruun mobiiliratkaisuna maailmalla melko laajasti. QFieldin käyttäjämäärää on melko vaikea arvioida, sillä ohjelmistoa ei tarvitse rekisteröidä, sitä voi käyttää useilla laitteilla samanaikaisesti ja jakaa edelleen vapaasti. Arvio kuukausittain QFieldiä käyttävistä on noin satatuhatta käyttäjää, sovelluksen kunkin version latausten määrä liikkuu puolestaan muutamassa sadassa tuhannessa kappaleessa
 
@@ -34,7 +34,7 @@ QField--ohjelmisto on suunniteltu hyvin yhteensopivaksi QGIS-työpöytäohjelmis
 
 \
 
-## **Miksi QField?**
+## Miksi QField?
 
 Perimmäinen syy QFieldin käyttöön on tietysti paikkatietoaineistojen hyödyntäminen. Paikkatietoja voi hyödyntää monilla avoimen ja suljetun lähdekoodin ohjelmistolla, mutta tässä muutamia perusteluja juuri QField-ohjelmiston käytölle:
 
@@ -44,7 +44,7 @@ Perimmäinen syy QFieldin käyttöön on tietysti paikkatietoaineistojen hyödyn
 
 -   **QField kehittyy jatkuvasti**. Kuka tahansa voi lisätä tai rahoittaa uusia ominaisuuksia QFieldiin ja siksi ohjelmisto kehittyy kiihtyvällä vauhdilla. Erilaisten lisäosien avulla on helppo toteuttaa omia prosesseja tukevia toimintoja.
 
--   **QField on hyvin dokumentoitu**. QField sisältää laajan dokumentaation. Koko ajan kasvava käyttäjäyhteisö auttaa mielellään uusia käyttäjiä ja voit myös kysyä apua suoraan sovelluskehittäjiltä.
+-   **QField on hyvin dokumentoitu**. QField sisältää laajan [dokumentaation](https://docs.qfield.org/fi/). Koko ajan kasvava käyttäjäyhteisö auttaa mielellään uusia käyttäjiä ja voit myös kysyä apua suoraan sovelluskehittäjiltä.
 
 -   **QGIS on järjestelmäriippumaton**. QFieldiä kehitetään Android-käyttöjärjestelmän ohella Windows-, ja iOS-mobiililaitteille.
 
@@ -82,7 +82,7 @@ SELECT version();
 
 \
 
-## **Mistä lisätietoja?**
+## Mistä lisätietoja?
 
 Ohessa muutamia web-sivustoja, joista saat lisätietoja:
 
@@ -104,7 +104,7 @@ Ohessa muutamia web-sivustoja, joista saat lisätietoja:
 
 \
 
-## **Virheet**
+## Virheet
 
 Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä kouluttajalle tai sähköpostilla info\@gispo.fi-osoitteeseen.
 
