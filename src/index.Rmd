@@ -48,7 +48,7 @@ Perimmäinen syy QFieldin käyttöön on tietysti paikkatietoaineistojen hyödyn
 
 -   **QGIS on järjestelmäriippumaton**. QFieldiä kehitetään Android-käyttöjärjestelmän ohella Windows-, ja iOS-mobiililaitteille.
 
--   **QField on suomenkielinen**. QField-käyttöliittymä on suomennettu. Myös ruotsinkielinen versio on käytettävissä ilman lisäkustannuksia. Käyttöohjeita, web-sivustoja ja muita materiaaleja kehitetään ja suomennetaan jatkuvasti.
+-   **QField on suomenkielinen**. QField-käyttöliittymä on suomennettu. Myös ruotsinkielinen versio on käytettävissä ilman lisäkustannuksia. Käyttöohjeita, web-sivustoja ja muita materiaaleja kehitetään ja ohjelmaa suomennetaan jatkuvasti.
 
 \
 
