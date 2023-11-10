@@ -87,7 +87,7 @@ Ohessa muutamia web-sivustoja, joista saat lisätietoja:
 :::
 
 ::: note-box
-<https://qfield.org/docs/index.html>\
+<https://docs.qfield.org/fi/>\
 :::
 
 ::: note-box
